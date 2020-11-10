@@ -1,6 +1,7 @@
 $(document).ready(function() {
   //Creo arrey di bici con diverse proprietà
-  var bici = {
+  var bici = [
+    {
       nome:'mountainbike',
       peso: 75,
     },
@@ -15,7 +16,8 @@ $(document).ready(function() {
     {
       nome:'corsa',
       peso: 45,
-    };
+    },
+  ];
     console.log(bici);
 
   //Stampo la bici con il peso minore
