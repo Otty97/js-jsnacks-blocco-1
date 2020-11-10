@@ -1,5 +1,6 @@
 $(document).ready(function() {
   //JSnack A --> Creo arrey di squadre con proprietà (nome, punti fatti, falli subiti)
+
   var team = [
     {
       nome: 'juventus',
@@ -27,23 +28,21 @@ $(document).ready(function() {
       falliSubiti:0,
     },
   ];
+
+
   console.log(team);
 
-  //JSnack A --> Generare num.random al posto delle prop 0 (punti fatti, falli subiti)
-  var campionato = team[i]
+  //JSnack B --> Generare num.random al posto delle prop 0 (punti fatti, falli subiti)
+  function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //Il max è escluso e il min è incluso
+}
 
   for (var i = 0; i < team.length; i++) {
-    
-    team.puntiFatti function getRandomArbitrary(min, max){
-     return Math.random() * (max - min) + min;
-   }
+    team[i].puntiFatti = getRandomInt(0, 20);
+    team[i].falliSubiti = getRandomInt(0, 20);
   }
-
-
-
-
   console.log(team);
-
-
 
 });
